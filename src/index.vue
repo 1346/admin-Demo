@@ -9,7 +9,8 @@
     data() {
       return {
         ceshi: '这是一个测试数据',
-        ceshiAgain: '这是一个又是测试数据'
+        ceshiAgain: '这是一个又是测试数据',
+        ceshixixixi: 'asfasfasfa'
       }
     },
     created() {

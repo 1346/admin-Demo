@@ -8,7 +8,7 @@
   export default {
     data() {
       return {
-
+        ceshi: '这是一个测试数据'
       }
     },
     created() {

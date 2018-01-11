@@ -8,7 +8,13 @@
   export default {
     data() {
       return {
+<<<<<<< HEAD
 
+=======
+        ceshi: '这是一个测试数据',
+        ceshiAgain: '这是一个又是测试数据',
+        ceshixixixi: 'asfasfasfa'
+>>>>>>> ceshi
       }
     },
     created() {

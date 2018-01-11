@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
     <router-view/>
+    <router-link to="/HelloWorld">自带HelloWorld</router-link>
   </div>
 </template>
 

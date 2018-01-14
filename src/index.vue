@@ -8,7 +8,7 @@
   export default {
     data() {
       return {
-
+        addOther: '修改master分支上的同一文件同一地方'
       }
     },
     created() {

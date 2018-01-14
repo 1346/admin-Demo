@@ -7,7 +7,12 @@
 
 <script>
 export default {
-  name: 'app'
+  name: 'app',
+  data() {
+    return {
+      dev: '这是dev分支上的修改'
+    }
+  }
 }
 </script>
 

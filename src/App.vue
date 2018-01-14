@@ -10,7 +10,8 @@ export default {
   name: 'app',
   data() {
     return {
-      dev: '这是dev分支上的修改'
+      dev: '这是dev分支上的修改',
+      dev2: '测试一下修改同一文件'
     }
   }
 }

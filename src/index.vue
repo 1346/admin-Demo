@@ -19,7 +19,6 @@
         this.$http.get('/cartData.json').then(response => {
           const res = response;
           if (res.status > 0) {
-            console.log(123)
           }
         })
       }

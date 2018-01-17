@@ -1,5 +1,5 @@
 <template>
   <div>
-    <p>dfghjkjhgfghjkjhgfghjkjhgfghjkjhgf</p>
+    <p>这是一个首页</p>
   </div>
 </template>

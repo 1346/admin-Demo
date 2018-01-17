@@ -7,6 +7,10 @@ import VueResource from 'vue-resource'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import '../src/icons' // icon
+import 'normalize.css/normalize.css'// A modern alternative to CSS resets
+import '@/style/global.css'
+import store from './store'
+import './style/index.scss'
 
 Vue.config.productionTip = false;
 Vue.use(VueResource);
@@ -16,6 +20,7 @@ Vue.use(ElementUI);
 new Vue({
   el: '#app',
   router,
+  store,
   template: '<App/>',
   components: { App }
 })

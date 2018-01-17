@@ -17,7 +17,7 @@
       <svg-icon iconClass="example"></svg-icon>
     </i>
     <i>
-      <a href="#">下载<svg-icon iconClass="download"></svg-icon></a>
+      <router-link class="i-a" to="/">返回首页<svg-icon iconClass="back"></svg-icon></router-link>
     </i>
   </div>
 </template>
@@ -51,21 +51,26 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
-  font-weight: normal;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
-.iconClass {
-  font-size: 5em;
-}
+  h1, h2 {
+    font-weight: normal;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  li {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  a {
+    color: #42b983;
+  }
+  .iconClass {
+    font-size: 5em;
+  }
+  .i-a {
+    font-size: 14px;
+    font-style: normal;
+    text-decoration: none;
+  }
 </style>

@@ -11,26 +11,27 @@ export const constantRouterMap = [
     path: '/',
     component: Layout,
     redirect: '/dashboard',
-    name: 'Dashboard',
+    name: '首页',
     hidden: true,
     children: [{
       path: 'dashboard',
-      component: () => import('@/views/dashboard/index')
+      component: _import('dashboard/index')
+      // component: () => import('@/views/dashboard/index')
     }]
   },
 
   {
-    path: '/Test',
+    path: '/IconLib',
     component: Layout,
-    name: '测试',
-    icon: 'example',
+    name: '一些图标',
+    redirect: 'noredirect',
+    icon: 'icons',
     children: [
       {
         path: 'index',
-        name: 'Test',
-        icon: 'testing-mouse',
-        component: _import('Test/test'),
-        meta: { title: 'Test', icon: 'test' }
+        name: '图标',
+        icon: 'icons',
+        component: _import('IconLib/index')
       }
     ]
   },

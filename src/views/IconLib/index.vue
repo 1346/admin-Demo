@@ -33,21 +33,8 @@
     },
     methods: {
       getIcons() {
-        var x = [], y = [];
         icons.state.iconsMap.map((i) => {
-          if (i.default.id.indexOf('y') > 0) {
-            x.push(i.default.id);
-            var iconsMap = x.map(item => {
-              return item.split('icon-')[1]
-            });
-            this.iconsMap = iconsMap;
-          } else {
-            y.push(i.default.id);
-            var otherIconsMap = y.map(item => {
-              return item.split('-')[1]
-            });
-            this.otherIconsMap = otherIconsMap;
-          }
+          (i.default.id.indexOf('y') > 0) ? this.iconsMap.push(i.default.id.split('icon-')[1]) : this.otherIconsMap.push(i.default.id.split('icon-')[1]);
         });
       }
     }

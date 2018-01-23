@@ -5,6 +5,6 @@ const data = {
   generate(iconsMap) {
     this.state.iconsMap = iconsMap
   }
-}
+};
 
 export default data

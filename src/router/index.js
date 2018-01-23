@@ -16,7 +16,6 @@ export const constantRouterMap = [
     children: [{
       path: 'dashboard',
       component: _import('dashboard/index')
-      // component: () => import('@/views/dashboard/index')
     }]
   },
 
@@ -25,13 +24,29 @@ export const constantRouterMap = [
     component: Layout,
     name: '一些图标',
     redirect: 'noredirect',
-    icon: 'icons',
+    icon: 'books',
     children: [
       {
         path: 'index',
         name: '图标',
-        icon: 'icons',
+        icon: 'books',
         component: _import('IconLib/index')
+      }
+    ]
+  },
+
+  {
+    path: '/components',
+    component: Layout,
+    name: '按钮组件',
+    redirect: 'noredirect',
+    icon: 'books',
+    children: [
+      {
+        path: 'Button/index',
+        name: '按钮',
+        icon: 'books',
+        component: _import('Button/index')
       }
     ]
   },

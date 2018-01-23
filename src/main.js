@@ -8,7 +8,7 @@ import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import '../src/icons' // icon
 import 'normalize.css/normalize.css'// A modern alternative to CSS resets
-import '@/style/global.css'
+import '@/style/global.scss'
 import store from './store'
 import './style/index.scss'
 

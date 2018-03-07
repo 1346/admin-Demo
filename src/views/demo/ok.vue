@@ -12,9 +12,6 @@
       <div class="test"></div>
     </div>
 
-    <div>测试</div>
-    <div>测试 * 2</div>
-
   </div>
 </template>
 <script>

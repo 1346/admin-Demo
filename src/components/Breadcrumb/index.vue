@@ -6,10 +6,13 @@
         <router-link v-else :to="item.redirect||item.path">{{item.name}}</router-link>
       </el-breadcrumb-item>
     </transition-group>
+    <p class="welcome hidden-md-and-down">hi,你好，亲爱的{{ introduction }}。   Eyes can't see anything, should be to look for it with all your heart.</p>
   </el-breadcrumb>
 </template>
 
 <script>
+  import { mapGetters } from 'vuex'
+
   export default {
     created() {
       this.getBreadcrumb()
@@ -23,6 +26,14 @@
       $route() {
         this.getBreadcrumb()
       }
+    },
+    computed: {
+      ...mapGetters([
+        'sidebar',
+        'avatar',
+        'name',
+        'introduction'
+      ])
     },
     methods: {
       getBreadcrumb() {
@@ -46,6 +57,10 @@
     .no-redirect {
       color: #97a8be;
       cursor: text;
+    }
+    .welcome {
+      display: inline-block;
+      margin: 0 0 0 30px;
     }
   }
 </style>

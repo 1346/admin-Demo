@@ -7,6 +7,8 @@ import Layout from '../views/layout/Layout'
 Vue.use(Router)
 
 export const constantRouterMap = [
+  { path: '/login', component: _import('login/index'), hidden: true },
+  { path: '/authredirect', component: _import('login/authredirect'), hidden: true },
   {
     path: '/',
     component: Layout,
@@ -34,7 +36,6 @@ export const constantRouterMap = [
       }
     ]
   },
-
   {
     path: '/components',
     component: Layout,
@@ -50,6 +51,42 @@ export const constantRouterMap = [
       }
     ]
   },
+  {
+    path: '/components',
+    component: Layout,
+    name: '定位',
+    redirect: 'noredirect',
+    icon: 'books',
+    children: [
+      {
+        path: 'position/index',
+        name: 'position',
+        icon: 'books',
+        component: _import('position/index')
+      }
+    ]
+  },
+  {
+    path: '/components',
+    component: Layout,
+    name: 'TODO',
+    redirect: 'noredirect',
+    icon: 'books',
+    children: [
+      {
+        path: 'Todo/index',
+        name: 'Todo',
+        icon: 'books',
+        component: _import('Todo/index')
+      }
+    ]
+  },
+  {path: '/components', component: Layout, name: 'Select', redirect: 'noredirect', icon: 'books', children: [{ path: 'Select/index', name: 'select', icon: 'books', component: _import('Select/index') }]},
+  {path: '/components', component: Layout, name: 'Demo', redirect: 'noredirect', icon: 'books',
+    children: [
+      {path: 'demo/ok', name: 'demo', icon: 'books', component: _import('demo/ok')},
+      {path: 'demo/demoStore', name: 'store', icon: 'books', component: _import('demo/demoStore')}
+    ]},
 ]
 
 export default new Router({

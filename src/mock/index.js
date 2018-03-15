@@ -1,5 +1,6 @@
 import Mock from 'mockjs'
 import loginAPI from './login'
+import tableAPI from './table'
 // import articleAPI from './article'
 // import remoteSearchAPI from './remoteSearch'
 // import transactionAPI from './transaction'
@@ -23,7 +24,7 @@ Mock.mock(/\/user\/info\.*/, 'get', loginAPI.getUserInfo)
 // 搜索相关
 // Mock.mock(/\/search\/user/, 'get', remoteSearchAPI.searchUser)
 
-// 账单相关
-// Mock.mock(/\/transaction\/list/, 'get', transactionAPI.getList)
+// 表格相关
+Mock.mock(/\/table\/table/, 'post', tableAPI.getTableInfo)
 
 export default Mock

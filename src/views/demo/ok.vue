@@ -8,13 +8,10 @@
     <FromList  :text="'所属投资机构名称'" v-model="mechanismN"></FromList>
 
     <div>
-      <input class="textInput" type="text" placeholder="测试一下" @input="changeInput()" @click="setPlaceholder()" />
-      <div class="test"></div>
-    </div>
-
-    <div>
-      <p>测试</p>
-      <p>测试1</p>
+      <p>起送金额：20元</p>
+      <p>配送费：{{ peisong }}元</p>
+      <p>您买了{{ food.name }} * {{ food.count }} === ￥{{ food.price }}元/份</p>
+      <p>共计：{{ totalPrice }}元</p>
     </div>
 
 
@@ -22,7 +19,6 @@
 </template>
 <script>
   import FromList from './index.vue';
-  import * as Rx from 'rxjs'
 
   export default {
     name: 'search',
@@ -34,15 +30,17 @@
         projectN: 'sfsaf',         // 创业项目名称
         companyN: 'asdfsadf',         // 所属公司名称
         mechanismN: 'xxxxx',        // 所属机构名称
+        food: { id:1, name:'红烧牛肉面', price: 20, count: 1},
+        peisong: 5
       }
     },
     created() {
       this.getInfo();
-      var myObservable = Rx.Observable.create(observer => {
-        observer.next('foo');
-        setTimeout(() => observer.next('bar'), 1000);
-      });
-      myObservable.subscribe(value => console.log(value));
+    },
+    computed: {
+      totalPrice() {
+        return this.food.price * this.food.count + this.peisong
+      }
     },
     methods: {
       getInfo() {
@@ -61,3 +59,9 @@
     }
   }
 </script>
+
+<style rel="stylesheet/scss" lang="scss">
+  .textInput {
+    width: 150px;
+  }
+</style>

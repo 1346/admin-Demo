@@ -4,6 +4,8 @@ const _import = require('./_import_' + process.env.NODE_ENV)
 
 import Layout from '../views/layout/Layout'
 
+import dome from '../routers/demo.js'
+
 Vue.use(Router)
 
 export const constantRouterMap = [
@@ -20,22 +22,7 @@ export const constantRouterMap = [
       component: _import('dashboard/index')
     }]
   },
-
-  {
-    path: '/IconLib',
-    component: Layout,
-    name: '一些图标',
-    redirect: 'noredirect',
-    icon: 'books',
-    children: [
-      {
-        path: 'index',
-        name: '图标',
-        icon: 'books',
-        component: _import('IconLib/index')
-      }
-    ]
-  },
+  ...dome,
   {
     path: '/components',
     component: Layout,
@@ -78,6 +65,21 @@ export const constantRouterMap = [
         name: 'Todo',
         icon: 'books',
         component: _import('Todo/index')
+      }
+    ]
+  },
+  {
+    path: '/table',
+    component: Layout,
+    name: 'Table',
+    redirect: 'noredirect',
+    icon: 'books',
+    children: [
+      {
+        path: 'table/index',
+        name: 'table',
+        icon: 'books',
+        component: _import('table/index')
       }
     ]
   },

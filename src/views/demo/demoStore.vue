@@ -1,7 +1,5 @@
 <template>
   <div>
-    <e-store></e-store>
-
     <div>
       <span>服务等级：</span>
       <span>{{ model.driver_category_name }}</span>
@@ -21,12 +19,11 @@
 </template>
 
 <script>
-  import EStore from '../../components/demo';
   import Tip from '../../components/tip';
   import { getTipInfo } from "../../api/tip";
 
   export default {
-    components: { EStore, Tip },
+    components: { Tip },
     data() {
       return {
         model: {}

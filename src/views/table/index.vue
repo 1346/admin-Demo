@@ -39,11 +39,6 @@
       >
       </el-table-column>
     </el-table>
-
-    <div>
-      <el-button type="primary" icon="plus">难受</el-button>
-      <i class="el-icon-caret-bottom"></i>
-    </div>
   </div>
 </template>
 

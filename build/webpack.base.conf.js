@@ -3,6 +3,7 @@ const path = require('path')
 const utils = require('./utils')
 const config = require('../config')
 const vueLoaderConfig = require('./vue-loader.conf')
+var SpritesmithPlugin = require('webpack-spritesmith');
 var webpack = require('webpack')
 
 function resolve (dir) {
@@ -34,6 +35,26 @@ module.exports = {
       jQuery: "jquery",
       jquery: "jquery",
       "window.jQuery": "jquery"
+    }),
+    new SpritesmithPlugin({
+      // 目标小图标
+      src: {
+        cwd: path.resolve(__dirname, '../src/assets/icons'),
+        glob: '*.png'
+      },
+      // 输出雪碧图文件及样式文件
+      target: {
+        image: path.resolve(__dirname, './dist/sprites/sprite.png'),
+        css: path.resolve(__dirname, './dist/sprites/sprite.css')
+      },
+      // 样式文件中调用雪碧图地址写法
+      apiOptions: {
+        cssImageRef: './sprite.png'
+        // cssImageRef: '../build/dist/sprites/sprite.png'
+      },
+      spritesmithOptions: {
+        algorithm: 'top-down'
+      }
     })
   ],
   module: {

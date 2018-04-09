@@ -15,6 +15,7 @@ import 'jquery'
 import './mock'
 import './permission'
 import 'element-ui/lib/theme-chalk/display.css'
+import '../build/dist/sprites/sprite.css'
 
 Vue.config.productionTip = false;
 Vue.use(VueResource);

@@ -13,7 +13,12 @@
 <script>
   export default {
     name: 'tip',
-    props: [ 'tip_class' ],
+    props: ['tip_class'],
+    // props: {
+    //   tip_class: {
+    //     type: String
+    //   }
+    // },
     data() {
       return {
         isShow: true

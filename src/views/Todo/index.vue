@@ -33,7 +33,7 @@
         txtArr: [],
         isOk: false,
         icon: 'no',
-        downIcon: 'no'
+        downIcon: 'no',
       }
     },
     directives: {

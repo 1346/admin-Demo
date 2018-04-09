@@ -14,7 +14,6 @@
       <p>共计：{{ totalPrice }}元</p>
     </div>
 
-
   </div>
 </template>
 <script>

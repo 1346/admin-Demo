@@ -17,11 +17,6 @@
 
     <div><i class="icon-ic_wenhao"></i></div>
 
-    <span>safasdf</span>
-    <p>123123123s</p>
-
-    <button>test</button>
-
   </div>
 </template>
 

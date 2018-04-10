@@ -61,9 +61,10 @@ const webpackConfig = merge(baseWebpackConfig, {
     // you can customize output by editing /index.html
     // see https://github.com/ampedandwired/html-webpack-plugin
     new HtmlWebpackPlugin({
-      filename: config.build.index,
+      filename: 'index.html',
       template: 'index.html',
       inject: true,
+      favicon: resolveApp('favicon.ico'),
       minify: {
         removeAttributeQuotes: true,
         removeComments: true,
@@ -80,7 +81,7 @@ const webpackConfig = merge(baseWebpackConfig, {
         // https://github.com/kangax/html-minifier#options-quick-reference
       },
       // necessary to consistently work with multiple chunks via CommonsChunkPlugin
-      chunks: ['manifest', 'vendor', 'app'],
+      path: config.build.assetsPublicPath + config.build.assetsSubDirectory,
       chunksSortMode: 'dependency'
     }),
     // keep module.id stable when vendor modules does not change

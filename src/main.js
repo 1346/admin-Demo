@@ -6,16 +6,16 @@ import router from './router'
 import VueResource from 'vue-resource'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
-import '../src/icons' // icon
 import 'normalize.css/normalize.css'// A modern alternative to CSS resets
-import './style/global.scss'
 import store from './store'
-import './style/index.scss'
 import 'jquery'
 import './mock'
 import './permission'
 import 'element-ui/lib/theme-chalk/display.css'
 import '../build/dist/sprites/sprite.css'
+import '../src/icons' // icon
+import './style/global.scss'
+import './style/index.scss'
 
 Vue.config.productionTip = false;
 Vue.use(VueResource);

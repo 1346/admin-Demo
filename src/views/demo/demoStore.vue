@@ -20,6 +20,8 @@
     <span>safasdf</span>
     <p>123123123s</p>
 
+    <button>test</button>
+
   </div>
 </template>
 
@@ -37,8 +39,11 @@
     },
     created() {
       this.getInfo();
-      var a = Rx.Observable.of(1,2,3);
-      console.log(a);
+      var myObservable = Rx.Observable.create(observer => {
+        observer.next('foo');
+        setTimeout(() => observer.next('bar'), 1000);
+      });
+      myObservable.subscribe(value => console.log(value));
     },
     methods: {
       getInfo() {

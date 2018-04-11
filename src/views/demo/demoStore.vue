@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="demo_demoStore">
     <div>
       <span>服务等级：</span>
       <span>{{ model.driver_category_name }}</span>
@@ -14,8 +14,12 @@
         <p v-for="item in model.driver_category_tags" :key="item.key">{{ item }}</p>
       </tip>
     </div>
+    <div>
+      <span>test</span>
+      <tip tip_class=""></tip>
+    </div>
 
-    <div><i class="icon-ic_wenhao"></i></div>
+    <i class="icon-ic_wenhao icon"></i>
 
   </div>
 </template>
@@ -51,3 +55,12 @@
     }
   }
 </script>
+
+<style lang="scss">
+  #demo_demoStore {
+    .icon {
+      display: block;
+    }
+  }
+</style>
+

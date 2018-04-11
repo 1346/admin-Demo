@@ -5,13 +5,15 @@
   "author": "1346 <961131804@qq.com>",
   "private": true,
   "scripts": {
-    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+    "dev": "grunt sprite && webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
     "build": "node build/build.js"
   },
   "dependencies": {
     "axios": "^0.18.0",
     "element-ui": "^2.0.11",
+    "grunt": "^1.0.2",
+    "grunt-spritesmith": "^6.6.0",
     "jquery": "^3.2.1",
     "js-cookie": "^2.2.0",
     "mockjs": "^1.0.1-beta3",

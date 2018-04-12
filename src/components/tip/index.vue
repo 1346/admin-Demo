@@ -1,5 +1,6 @@
 <template>
   <div class="tip" @mouseenter="mouseEnter" @mouseleave="mouseLeave">
+    <i class="icon-ic_wenhao"></i>
     <svg-icon iconClass="question" class="icon"></svg-icon>
     <div class="tip-content-w" :class="{ hidden: isShow }">
       <div class="tip-content" :class="tip_class">

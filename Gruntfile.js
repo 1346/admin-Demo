@@ -6,14 +6,13 @@ module.exports = function (grunt) {
           src: 'src/assets/images/icons/*.*',
           dest: 'src/assets/images/spritesheet.png',
           destCss: 'src/assets/css/sprites.css',
-          padding:20
-        },
-        // consumer:{
-        //   src: 'src/assets/new-images/icons/*.*',
-        //   dest: 'src/assets/images/pc_consumer/spritesheet2.png',
-        //   destCss: 'src/assets/css/sprites2.css',
-        //   padding:20
-        // }
+          // imgPath: '',   // 雪碧图在css中的url引用路径
+          // retinaImgPath: '',   // 两倍雪碧图在css中的url引用路径
+          // cssVarMap: function(sprite) {
+          //   sprite.name = 'm-ic-icon.m-ic-icon-' + sprite.name;  
+          //   //定义图标class名称，例如 del.png对应 m-ic-icon.m-ic-icon-del（如果不写则默认为”icon-‘文件名’“）
+          // }
+        }
       }
     });
   

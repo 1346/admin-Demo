@@ -1,7 +1,7 @@
 <template>
   <div class="tip" @mouseenter="mouseEnter" @mouseleave="mouseLeave">
-    <i class="icon-ic_wenhao"></i>
-    <svg-icon iconClass="question" class="icon"></svg-icon>
+    <!-- <i class="icon-ic_wenhao"></i> -->
+    <svg-icon :iconClass="iconClass" class="icon"></svg-icon>
     <div class="tip-content-w" :class="{ hidden: isShow }">
       <div class="tip-content" :class="tip_class">
         <slot></slot>
@@ -14,12 +14,16 @@
 <script>
   export default {
     name: 'tip',
-    props: ['tip_class'],
-    // props: {
-    //   tip_class: {
-    //     type: String
-    //   }
-    // },
+    // props: ['tip_class'],
+    props: {
+      tip_class: {
+        type: String
+      },
+      iconClass: {
+        type: String,
+        default: 'question'
+      }
+    },
     data() {
       return {
         isShow: true

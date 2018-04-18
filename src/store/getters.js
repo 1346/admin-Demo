@@ -10,6 +10,8 @@ const getters = {
   status: state => state.user.status,
   roles: state => state.user.roles,
   setting: state => state.user.setting,
-  addRouters: state => state.permission.addRouters
+  addRouters: state => state.permission.addRouters,
+  count: state => state.demo.count,
+  show: state => state.demo.show,
 }
 export default getters

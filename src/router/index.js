@@ -89,6 +89,21 @@ export const constantRouterMap = [
       {path: 'demo/ok', name: 'demo', icon: 'books', component: _import('demo/ok')},
       {path: 'demo/demoStore', name: 'store', icon: 'books', component: _import('demo/demoStore')}
     ]},
+  {
+    path: '/validate',
+    name: 'Validate',
+    component: Layout,
+    redirect: 'noredirect',
+    icon: 'books',
+    children: [
+      {
+        path: 'index',
+        name: 'validate',
+        icon: 'books',
+        component: _import('validate/index')
+      }
+    ]
+  }
 ]
 
 export default new Router({

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button class="c-button"><slot text="hello from child"></slot></button>
+    <button class="xs-button" :class="styleClass" @click="$emit('click')"><slot></slot></button>
   </div>
 </template>
 
@@ -8,10 +8,9 @@
   export default {
     name: 'EButton',
     props: {
-      title: {
-        type: String,
-        default: undefined
-      },
+      styleClass: {
+        type: String
+      }
     },
     data() {
       return {
@@ -21,4 +20,21 @@
   }
 </script>
 
-<style></style>
+<style lang="scss">
+  .xs-button {
+    padding: 0;
+    width: 304px;
+    height: 40px;
+    font-size: 14px;
+    background-color: #ED0A2B;
+    color: #FFFFFF;
+    border: none;
+    &:focus {
+      outline: 0;
+      border: none;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+</style>

@@ -101,6 +101,18 @@ export const constantRouterMap = [
         name: 'validate',
         icon: 'books',
         component: _import('validate/index')
+      },
+      {
+        path: 'shortcut',
+        name: 'shortcut',
+        icon: 'books',
+        component: _import('validate/shortcut')
+      },
+      {
+        path: 'quilljs',
+        name: 'quilljs',
+        icon: 'books',
+        component: _import('validate/quilljs')
       }
     ]
   }

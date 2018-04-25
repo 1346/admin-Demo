@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button class="xs-button" :class="styleClass" @click="$emit('click')"><slot></slot></button>
+    <button class="xs-button" :class="styleClass" @click="$emit('click')" :disabled="disabled"><slot></slot></button>
   </div>
 </template>
 
@@ -10,11 +10,20 @@
     props: {
       styleClass: {
         type: String
+      },
+      disabled: {
+        type: Boolean,
+        default: false
       }
     },
     data() {
       return {
 
+      }
+    },
+    created() {
+      if (this.disabled === true) {
+        console.log(23132)
       }
     }
   }

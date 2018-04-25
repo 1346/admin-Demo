@@ -1,5 +1,6 @@
 <template>
   <div style="position:relative;">
+    <slot name="head"></slot>
     <input
       :placeholder="placeholder"
       :type="type"

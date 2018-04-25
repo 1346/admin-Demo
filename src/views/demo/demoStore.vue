@@ -81,8 +81,11 @@ methods: {
     },
   ...mapActions({
     lessCount: 'demoMutationLess',
-    showOk: 'isShow'
+    // showOk: 'isShow'
   }),
+  showOk() {
+      this.$store.dispatch('isShow')
+  }
     // lessCount() {
     //   this.$store.dispatch('demoMutationLess');
     //   // this.$store.commit('demoMutationLess')

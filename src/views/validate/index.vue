@@ -1,7 +1,7 @@
 <template>
   <div id="button_index">
     <div style="margin-bottom: 50px">
-    <c-input styleClass="IClass" v-model="input" placeholder="请输入手机号"><i class="icon-ic_ok icon"></i></c-input>
+    <c-input styleClass="IClass" v-model="input" placeholder="请输入手机号"><i class="icon-ic_ok button_icon"></i></c-input>
     <c-button styleClass="BClass" @click="showMore" :disabled="true">确认</c-button>
       <button :disabled="true">确认</button>
     </div>
@@ -74,7 +74,7 @@
     .IClass {
       padding-right: 35px;
     }
-    .icon {
+    .button_icon {
       position: absolute;
       left: 274px;
       top: 50%;
